@@ -6,17 +6,17 @@ public class Sorter {
         int[] array = {5, 7, 3, 1, 4};
         System.out.println("Original array: " + Arrays.toString(array));
 
-        selctionSort(array, 0);
+        selectionSort(array, 0);
 
         System.out.println("Sorted array: " + Arrays.toString(array));
     }
-    public static void selctionSort(int[] list, int startIndex) {
+    public static void selectionSort(int[] list, int startIndex) {
         if (startIndex < list.length - 1) {
             int minIndex = findMinIndex(list, startIndex);
             int temp = list[minIndex];
             list[minIndex] = list[startIndex];
             list[startIndex] = temp;
-            selctionSort(list, startIndex + 1);
+            selectionSort(list, startIndex + 1);
         }
     }
     private static int findMinIndex(int[] arr, int startIndex) {
