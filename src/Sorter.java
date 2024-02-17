@@ -25,6 +25,7 @@ public class Sorter {
             selectionSort(list, startIndex + 1);
         }
     }
+
     private static int findMinIndex(int[] arr, int startIndex) {
         int minIndex = startIndex;
         for (int i = startIndex + 1; i < arr.length; i++) {
@@ -48,5 +49,10 @@ public class Sorter {
             }
             arr[j + 1] = key;
         }
+    }
+
+    
+    public static void sort(int[] array) {
+        insertionSort(array);
     }
 }
