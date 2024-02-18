@@ -6,7 +6,7 @@ public class Sorter {
         int[] array = {5, 7, 3, 1, 4};
         System.out.println("Original array: " + Arrays.toString(array));
 
-        selectionSort(array, 0);
+        sort(array);
 
         System.out.println("Sorted array: " + Arrays.toString(array));
     }
@@ -19,7 +19,7 @@ public class Sorter {
             selectionSort(list, startIndex + 1);
         }
     }
-    private static int findMinIndex(int[] arr, int startIndex) {
+    public static int findMinIndex(int[] arr, int startIndex) {
         int minIndex = startIndex;
         for (int i = startIndex + 1; i < arr.length; i++) {
             if (arr[i] < arr[minIndex]) {
@@ -28,5 +28,8 @@ public class Sorter {
         }
 
         return minIndex;
+    }
+    public static void sort(int[] array){
+        selectionSort(array,0);
     }
 }
